@@ -1,3 +1,4 @@
+let numeroLimite = 15;
 let numeroSecreto = gerarNumeroAleatorio();
 let chute;
 let tentativa = 1;
@@ -18,11 +19,11 @@ exibirMensagem()
 
 function exibirMensagem() {
 exibirTextoNaTela('h1', 'Adivinhe o Número Secreto!');
-exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+exibirTextoNaTela('p', `Escolha um número entre 1 e ${numeroLimite}`);
 }
 
 function gerarNumeroAleatorio(){
-    return parseInt(Math.random() * 10 + 1);
+    return parseInt(Math.random() * numeroLimite + 1);
 }
 
 
